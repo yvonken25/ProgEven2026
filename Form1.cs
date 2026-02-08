@@ -6,5 +6,26 @@ namespace ProgEven2026
         {
             InitializeComponent();
         }
+
+        private void bPermut_Click(object sender, EventArgs e)
+        {
+            Image tempImage = pictureBox1.Image;
+
+
+            pictureBox1.Image = pictureBox2.Image;
+
+
+            pictureBox2.Image = tempImage;
+        }
+
+        private void bOpen_Click(object sender, EventArgs e)
+        {
+            Form2 secondeFenetre = new Form2();
+
+            
+            secondeFenetre.Show();
+
+            this.Hide();
+        }
     }
 }

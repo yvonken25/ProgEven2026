@@ -28,10 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form2";
+            SuspendLayout();
+            // 
+            // Form2
+            // 
+            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackgroundImage = Properties.Resources.IMG_0300;
+            ClientSize = new Size(800, 450);
+            Name = "Form2";
+            Text = "Form2";
+            FormClosing += Form2_FormClosing;
+            ResumeLayout(false);
         }
 
         #endregion
