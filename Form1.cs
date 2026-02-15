@@ -22,10 +22,17 @@ namespace ProgEven2026
         {
             Form2 secondeFenetre = new Form2();
 
-            
+
             secondeFenetre.Show();
 
             this.Hide();
+        }
+
+        private void bPrincipal_Click(object sender, EventArgs e)
+        {
+            Form3 f = new Form3();
+            f.ShowDialog();
+
         }
     }
 }

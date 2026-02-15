@@ -32,6 +32,7 @@
             pictureBox2 = new PictureBox();
             pictureBox1 = new PictureBox();
             bPermut = new Button();
+            bPrincipal = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
@@ -78,11 +79,22 @@
             bPermut.UseVisualStyleBackColor = true;
             bPermut.Click += bPermut_Click;
             // 
+            // bPrincipal
+            // 
+            bPrincipal.Location = new Point(314, 385);
+            bPrincipal.Name = "bPrincipal";
+            bPrincipal.Size = new Size(222, 34);
+            bPrincipal.TabIndex = 8;
+            bPrincipal.Text = "Ouvrir fenetre principale";
+            bPrincipal.UseVisualStyleBackColor = true;
+            bPrincipal.Click += bPrincipal_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(bPrincipal);
             Controls.Add(bOpen);
             Controls.Add(pictureBox2);
             Controls.Add(pictureBox1);
@@ -100,5 +112,6 @@
         private PictureBox pictureBox2;
         private PictureBox pictureBox1;
         private Button bPermut;
+        private Button bPrincipal;
     }
 }
