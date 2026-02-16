@@ -51,5 +51,10 @@ namespace ProgEven2026
             EcranProgression f = new EcranProgression();
             f.ShowDialog();
         }
+
+        private void Form3_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

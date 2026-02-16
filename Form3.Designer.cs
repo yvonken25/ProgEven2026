@@ -88,7 +88,7 @@
             // menuEditeur
             // 
             menuEditeur.Name = "menuEditeur";
-            menuEditeur.Size = new Size(270, 34);
+            menuEditeur.Size = new Size(169, 34);
             menuEditeur.Text = "Editeur";
             menuEditeur.Click += menuEditeur_Click;
             // 
@@ -102,7 +102,7 @@
             // menuAPropos
             // 
             menuAPropos.Name = "menuAPropos";
-            menuAPropos.Size = new Size(189, 34);
+            menuAPropos.Size = new Size(270, 34);
             menuAPropos.Text = "A propos";
             menuAPropos.Click += menuAPropos_Click;
             // 
@@ -115,6 +115,7 @@
             MainMenuStrip = menuStrip1;
             Name = "Form3";
             Text = "Form3";
+            Load += Form3_Load;
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
             ResumeLayout(false);
