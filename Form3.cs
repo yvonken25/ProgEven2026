@@ -38,7 +38,8 @@ namespace ProgEven2026
 
         private void menuListe_Click(object sender, EventArgs e)
         {
-            MethodeNonImplantee(sender, e);
+           EcranListe f = new EcranListe();
+            f.ShowDialog();
         }
 
         private void menuEditeur_Click(object sender, EventArgs e)
