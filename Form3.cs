@@ -38,7 +38,7 @@ namespace ProgEven2026
 
         private void menuListe_Click(object sender, EventArgs e)
         {
-           EcranListe f = new EcranListe();
+            EcranListe f = new EcranListe();
             f.ShowDialog();
         }
 
@@ -56,6 +56,12 @@ namespace ProgEven2026
         private void Form3_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void malwareToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FicMalware f = new FicMalware();
+            f.Show();
         }
     }
 }

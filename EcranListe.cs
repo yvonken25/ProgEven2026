@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.Intrinsics.X86;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -53,7 +54,26 @@ namespace ProgEven2026
         {
             if (lbPersonne.SelectedIndex != -1)
             {
-                lbPersonne.Items.RemoveAt(lbPersonne.SelectedIndex);
+                int indexASupprimer = lbPersonne.SelectedIndex;
+
+                int numeroSupprime = indexASupprimer + 1; for (int i = 0; i < lbPersonne.Items.Count; i++)
+                {
+                    string ligneCourante = lbPersonne.Items[i].ToString();
+                    int positionHash = ligneCourante.LastIndexOf('#');
+
+                    if (positionHash != -1)
+                    {
+                        string texte = ligneCourante.Substring(0, positionHash);
+                        int idActuel = int.Parse(ligneCourante.Substring(positionHash + 1));
+
+                        // Si l'ID est supérieur à celui supprimé, on décrémente
+                        if (idActuel > numeroSupprime)
+                        {
+                            lbPersonne.Items[i] = $"{texte}#{idActuel - 1}";
+                        }
+                    }
+                }
+
             }
             else
             {
@@ -87,7 +107,11 @@ namespace ProgEven2026
                 string[] lignes = File.ReadAllLines(NomFichier);
                 foreach (string l in lignes)
                 {
-                    lbPersonne.Items.Add(l);
+                    if (l.Contains("#"))
+                        lbPersonne.Items.Add(l);
+                    else
+                        lbPersonne.Items.Add($"{l}#{lbPersonne.Items.Count + 1}");
+
                 }
             }
         }
