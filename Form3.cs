@@ -44,7 +44,8 @@ namespace ProgEven2026
 
         private void menuEditeur_Click(object sender, EventArgs e)
         {
-            MethodeNonImplantee(sender, e);
+           EcranEditeur f = new EcranEditeur();
+            f.ShowDialog();
         }
 
         private void menuProgression_Click(object sender, EventArgs e)
