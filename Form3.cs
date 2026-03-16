@@ -76,5 +76,11 @@ namespace ProgEven2026
             EcranClavierSouris f = new EcranClavierSouris();
             f.Show();
         }
+
+        private void explorateurToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            EcranExplorateur f = new EcranExplorateur();
+            f.Show();
+        }
     }
 }

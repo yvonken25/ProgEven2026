@@ -40,16 +40,17 @@
             malwareToolStripMenuItem = new ToolStripMenuItem();
             spirographeToolStripMenuItem = new ToolStripMenuItem();
             clavierSourisToolStripMenuItem = new ToolStripMenuItem();
+            explorateurToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
             // menuStrip1
             // 
             menuStrip1.ImageScalingSize = new Size(24, 24);
-            menuStrip1.Items.AddRange(new ToolStripItem[] { controlesToolStripMenuItem, applicationsToolStripMenuItem, aideToolStripMenuItem, malwareToolStripMenuItem, spirographeToolStripMenuItem, clavierSourisToolStripMenuItem });
+            menuStrip1.Items.AddRange(new ToolStripItem[] { controlesToolStripMenuItem, applicationsToolStripMenuItem, aideToolStripMenuItem, malwareToolStripMenuItem, spirographeToolStripMenuItem, clavierSourisToolStripMenuItem, explorateurToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(800, 33);
+            menuStrip1.Size = new Size(871, 33);
             menuStrip1.TabIndex = 0;
             menuStrip1.Text = "menuStrip1";
             // 
@@ -130,11 +131,18 @@
             clavierSourisToolStripMenuItem.Text = "Clavier Souris";
             clavierSourisToolStripMenuItem.Click += clavierSourisToolStripMenuItem_Click;
             // 
+            // explorateurToolStripMenuItem
+            // 
+            explorateurToolStripMenuItem.Name = "explorateurToolStripMenuItem";
+            explorateurToolStripMenuItem.Size = new Size(117, 29);
+            explorateurToolStripMenuItem.Text = "Explorateur";
+            explorateurToolStripMenuItem.Click += explorateurToolStripMenuItem_Click;
+            // 
             // Form3
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(871, 450);
             Controls.Add(menuStrip1);
             MainMenuStrip = menuStrip1;
             Name = "Form3";
@@ -160,5 +168,6 @@
         private ToolStripMenuItem malwareToolStripMenuItem;
         private ToolStripMenuItem spirographeToolStripMenuItem;
         private ToolStripMenuItem clavierSourisToolStripMenuItem;
+        private ToolStripMenuItem explorateurToolStripMenuItem;
     }
 }
