@@ -44,7 +44,7 @@ namespace ProgEven2026
 
         private void menuEditeur_Click(object sender, EventArgs e)
         {
-           EcranEditeur f = new EcranEditeur();
+            EcranEditeur f = new EcranEditeur();
             f.ShowDialog();
         }
 
@@ -62,6 +62,18 @@ namespace ProgEven2026
         private void malwareToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FicMalware f = new FicMalware();
+            f.Show();
+        }
+
+        private void spirographeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            EcranSpirographe f = new EcranSpirographe();
+            f.Show();
+        }
+
+        private void clavierSourisToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            EcranClavierSouris f = new EcranClavierSouris();
             f.Show();
         }
     }

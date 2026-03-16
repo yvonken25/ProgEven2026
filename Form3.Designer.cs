@@ -38,13 +38,15 @@
             aideToolStripMenuItem = new ToolStripMenuItem();
             menuAPropos = new ToolStripMenuItem();
             malwareToolStripMenuItem = new ToolStripMenuItem();
+            spirographeToolStripMenuItem = new ToolStripMenuItem();
+            clavierSourisToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
             // menuStrip1
             // 
             menuStrip1.ImageScalingSize = new Size(24, 24);
-            menuStrip1.Items.AddRange(new ToolStripItem[] { controlesToolStripMenuItem, applicationsToolStripMenuItem, aideToolStripMenuItem, malwareToolStripMenuItem });
+            menuStrip1.Items.AddRange(new ToolStripItem[] { controlesToolStripMenuItem, applicationsToolStripMenuItem, aideToolStripMenuItem, malwareToolStripMenuItem, spirographeToolStripMenuItem, clavierSourisToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Size = new Size(800, 33);
@@ -114,6 +116,20 @@
             malwareToolStripMenuItem.Text = "Malware";
             malwareToolStripMenuItem.Click += malwareToolStripMenuItem_Click;
             // 
+            // spirographeToolStripMenuItem
+            // 
+            spirographeToolStripMenuItem.Name = "spirographeToolStripMenuItem";
+            spirographeToolStripMenuItem.Size = new Size(126, 29);
+            spirographeToolStripMenuItem.Text = "Spirographe";
+            spirographeToolStripMenuItem.Click += spirographeToolStripMenuItem_Click;
+            // 
+            // clavierSourisToolStripMenuItem
+            // 
+            clavierSourisToolStripMenuItem.Name = "clavierSourisToolStripMenuItem";
+            clavierSourisToolStripMenuItem.Size = new Size(134, 29);
+            clavierSourisToolStripMenuItem.Text = "Clavier Souris";
+            clavierSourisToolStripMenuItem.Click += clavierSourisToolStripMenuItem_Click;
+            // 
             // Form3
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
@@ -142,5 +158,7 @@
         private ToolStripMenuItem aideToolStripMenuItem;
         private ToolStripMenuItem menuAPropos;
         private ToolStripMenuItem malwareToolStripMenuItem;
+        private ToolStripMenuItem spirographeToolStripMenuItem;
+        private ToolStripMenuItem clavierSourisToolStripMenuItem;
     }
 }
