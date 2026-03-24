@@ -28,21 +28,40 @@ namespace ProgEven2026
         private void RemplirTreeView()
         {
             tvRepertoire.Nodes.Clear();
-            TreeNode root = new TreeNode("Poste de travail");
-            tvRepertoire.Nodes.Add(root);
+            // On écoute l'événement "Avant expansion"
+            tvRepertoire.BeforeExpand += TvRepertoire_BeforeExpand;
 
-            foreach (string drive in Environment.GetLogicalDrives())
+            foreach (string drive in Directory.GetLogicalDrives())
             {
-                TreeNode driveNode = new TreeNode(drive);
-                root.Nodes.Add(driveNode);
+                TreeNode driveNode = new TreeNode(drive) { Tag = drive };
+                // On ajoute un nœud vide pour forcer l'apparition du bouton [+]
+                driveNode.Nodes.Add("...");
+                tvRepertoire.Nodes.Add(driveNode);
+            }
+        }
+
+        private void TvRepertoire_BeforeExpand(object sender, TreeViewCancelEventArgs e)
+        {
+            TreeNode parentNode = e.Node;
+
+            // Si le nœud contient notre dossier fictif "..."
+            if (parentNode.Nodes.Count > 0 && parentNode.Nodes[0].Text == "...")
+            {
+                parentNode.Nodes.Clear(); // On retire le fictif
+                string chemin = parentNode.Tag.ToString();
 
                 try
                 {
-                    LireRepertoires(drive, driveNode);
+                    foreach (string dir in Directory.GetDirectories(chemin))
+                    {
+                        TreeNode node = new TreeNode(Path.GetFileName(dir)) { Tag = dir };
+                        // On remet un dossier fictif sous chaque sous-dossier
+                        node.Nodes.Add("...");
+                        parentNode.Nodes.Add(node);
+                    }
                 }
-                catch { /* Ignorer les disques non prêts (CD, USB vide) */ }
+                catch (UnauthorizedAccessException) { /* Dossier système protégé */ }
             }
-            root.Expand();
         }
 
         private void LireRepertoires(string chemin, TreeNode parentNode)

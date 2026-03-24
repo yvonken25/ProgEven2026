@@ -30,11 +30,11 @@
         {
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EcranExplorateur));
-            ListViewItem listViewItem6 = new ListViewItem("Nom");
-            ListViewItem listViewItem7 = new ListViewItem("Taille");
-            ListViewItem listViewItem8 = new ListViewItem("Creation");
-            ListViewItem listViewItem9 = new ListViewItem("Modifications");
-            ListViewItem listViewItem10 = new ListViewItem("");
+            ListViewItem listViewItem1 = new ListViewItem("Nom");
+            ListViewItem listViewItem2 = new ListViewItem("Taille");
+            ListViewItem listViewItem3 = new ListViewItem("Creation");
+            ListViewItem listViewItem4 = new ListViewItem("Modifications");
+            ListViewItem listViewItem5 = new ListViewItem("");
             tsCommandes = new ToolStrip();
             tsbQuitter = new ToolStripButton();
             toolStripSeparator1 = new ToolStripSeparator();
@@ -100,28 +100,28 @@
             // tsaPetiteIcone
             // 
             tsaPetiteIcone.Name = "tsaPetiteIcone";
-            tsaPetiteIcone.Size = new Size(270, 34);
+            tsaPetiteIcone.Size = new Size(219, 34);
             tsaPetiteIcone.Text = "Petite Icone";
             tsaPetiteIcone.Click += tsaPetitesIcones_Click;
             // 
             // tsaGrandeIcone
             // 
             tsaGrandeIcone.Name = "tsaGrandeIcone";
-            tsaGrandeIcone.Size = new Size(270, 34);
+            tsaGrandeIcone.Size = new Size(219, 34);
             tsaGrandeIcone.Text = "Grande Icone";
             tsaGrandeIcone.Click += tsaGrandesIcones_Click;
             // 
             // tsaListe
             // 
             tsaListe.Name = "tsaListe";
-            tsaListe.Size = new Size(270, 34);
+            tsaListe.Size = new Size(219, 34);
             tsaListe.Text = "Liste";
             tsaListe.Click += tsaListe_Click;
             // 
             // tsaDetail
             // 
             tsaDetail.Name = "tsaDetail";
-            tsaDetail.Size = new Size(270, 34);
+            tsaDetail.Size = new Size(219, 34);
             tsaDetail.Text = "Detail";
             tsaDetail.Click += tsaDetail_Click;
             // 
@@ -168,7 +168,7 @@
             // lvFichiers
             // 
             lvFichiers.Columns.AddRange(new ColumnHeader[] { NOM, TAIL, CREA, MODI });
-            lvFichiers.Items.AddRange(new ListViewItem[] { listViewItem6, listViewItem7, listViewItem8, listViewItem9, listViewItem10 });
+            lvFichiers.Items.AddRange(new ListViewItem[] { listViewItem1, listViewItem2, listViewItem3, listViewItem4, listViewItem5 });
             lvFichiers.Location = new Point(3, 0);
             lvFichiers.Name = "lvFichiers";
             lvFichiers.Size = new Size(660, 420);
