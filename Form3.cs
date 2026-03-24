@@ -83,5 +83,12 @@ namespace ProgEven2026
             EcranExplorateur f = new EcranExplorateur();
             f.Show();
         }
+
+        private void baseDeDonnéesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            EcranBDDirect f = new EcranBDDirect();
+            f.Show();
+
+        }
     }
 }
