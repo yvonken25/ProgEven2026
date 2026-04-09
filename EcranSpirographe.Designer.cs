@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             lSommet = new Label();
             lProfondeur = new Label();
             lDensite = new Label();
@@ -39,6 +40,8 @@
             bTrait = new Button();
             bFond = new Button();
             cdCouleur = new ColorDialog();
+            timerHorloge = new System.Windows.Forms.Timer(components);
+            gbParametrage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)tbSommets).BeginInit();
             ((System.ComponentModel.ISupportInitialize)tbDensite).BeginInit();
             ((System.ComponentModel.ISupportInitialize)tbProfondeur).BeginInit();
@@ -47,7 +50,7 @@
             // lSommet
             // 
             lSommet.AutoSize = true;
-            lSommet.Location = new Point(118, 551);
+            lSommet.Location = new Point(27, 84);
             lSommet.Name = "lSommet";
             lSommet.Size = new Size(80, 25);
             lSommet.TabIndex = 0;
@@ -56,7 +59,7 @@
             // lProfondeur
             // 
             lProfondeur.AutoSize = true;
-            lProfondeur.Location = new Point(570, 551);
+            lProfondeur.Location = new Point(17, 333);
             lProfondeur.Name = "lProfondeur";
             lProfondeur.Size = new Size(102, 25);
             lProfondeur.TabIndex = 1;
@@ -65,7 +68,7 @@
             // lDensite
             // 
             lDensite.AutoSize = true;
-            lDensite.Location = new Point(344, 551);
+            lDensite.Location = new Point(17, 201);
             lDensite.Name = "lDensite";
             lDensite.Size = new Size(71, 25);
             lDensite.TabIndex = 2;
@@ -73,60 +76,73 @@
             // 
             // gbParametrage
             // 
+            gbParametrage.Controls.Add(tbSommets);
+            gbParametrage.Controls.Add(lSommet);
+            gbParametrage.Controls.Add(lProfondeur);
+            gbParametrage.Controls.Add(tbProfondeur);
+            gbParametrage.Controls.Add(lDensite);
+            gbParametrage.Controls.Add(tbDensite);
             gbParametrage.Location = new Point(12, 21);
             gbParametrage.Name = "gbParametrage";
-            gbParametrage.Size = new Size(300, 236);
+            gbParametrage.Size = new Size(206, 419);
             gbParametrage.TabIndex = 3;
             gbParametrage.TabStop = false;
             gbParametrage.Text = "groupBox1";
             // 
             // tbSommets
             // 
-            tbSommets.Location = new Point(107, 600);
+            tbSommets.Location = new Point(6, 129);
             tbSommets.Name = "tbSommets";
             tbSommets.Size = new Size(156, 69);
             tbSommets.TabIndex = 4;
             // 
             // tbDensite
             // 
-            tbDensite.Location = new Point(332, 600);
+            tbDensite.Location = new Point(6, 229);
             tbDensite.Name = "tbDensite";
             tbDensite.Size = new Size(156, 69);
             tbDensite.TabIndex = 5;
             // 
             // tbProfondeur
             // 
-            tbProfondeur.Location = new Point(558, 600);
+            tbProfondeur.Location = new Point(6, 361);
             tbProfondeur.Name = "tbProfondeur";
             tbProfondeur.Size = new Size(156, 69);
             tbProfondeur.TabIndex = 6;
             // 
             // bGo
             // 
-            bGo.Location = new Point(28, 388);
+            bGo.Location = new Point(62, 594);
             bGo.Name = "bGo";
             bGo.Size = new Size(112, 34);
             bGo.TabIndex = 7;
             bGo.Text = "Go";
             bGo.UseVisualStyleBackColor = true;
+            bGo.Click += bGo_Click;
             // 
             // bTrait
             // 
-            bTrait.Location = new Point(28, 335);
+            bTrait.Location = new Point(62, 532);
             bTrait.Name = "bTrait";
             bTrait.Size = new Size(112, 34);
             bTrait.TabIndex = 8;
             bTrait.Text = "Trait";
             bTrait.UseVisualStyleBackColor = true;
+            bTrait.Click += bTrait_Click;
             // 
             // bFond
             // 
-            bFond.Location = new Point(28, 285);
+            bFond.Location = new Point(62, 468);
             bFond.Name = "bFond";
             bFond.Size = new Size(112, 34);
             bFond.TabIndex = 9;
             bFond.Text = "Fond";
             bFond.UseVisualStyleBackColor = true;
+            bFond.Click += bFond_Click;
+            // 
+            // timerHorloge
+            // 
+            timerHorloge.Tick += timerHorloge_Tick;
             // 
             // EcranSpirographe
             // 
@@ -136,20 +152,17 @@
             Controls.Add(bFond);
             Controls.Add(bTrait);
             Controls.Add(bGo);
-            Controls.Add(tbProfondeur);
-            Controls.Add(tbDensite);
-            Controls.Add(tbSommets);
             Controls.Add(gbParametrage);
-            Controls.Add(lDensite);
-            Controls.Add(lProfondeur);
-            Controls.Add(lSommet);
+            DoubleBuffered = true;
             Name = "EcranSpirographe";
             Text = "Ecran Spirographe";
+            Load += EcranSpirographe_Load;
+            gbParametrage.ResumeLayout(false);
+            gbParametrage.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)tbSommets).EndInit();
             ((System.ComponentModel.ISupportInitialize)tbDensite).EndInit();
             ((System.ComponentModel.ISupportInitialize)tbProfondeur).EndInit();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
@@ -165,5 +178,6 @@
         private Button bTrait;
         private Button bFond;
         private ColorDialog cdCouleur;
+        private System.Windows.Forms.Timer timerHorloge;
     }
 }
