@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             lbConsole = new ListBox();
-            button1 = new Button();
+            bAjouter = new Button();
             bDenombrer = new Button();
             bConsulter = new Button();
             tbNom = new TextBox();
@@ -47,15 +47,15 @@
             lbConsole.Size = new Size(435, 429);
             lbConsole.TabIndex = 0;
             // 
-            // button1
+            // bAjouter
             // 
-            button1.BackColor = SystemColors.ControlLight;
-            button1.Location = new Point(485, 370);
-            button1.Name = "button1";
-            button1.Size = new Size(173, 34);
-            button1.TabIndex = 1;
-            button1.Text = "button1";
-            button1.UseVisualStyleBackColor = false;
+            bAjouter.BackColor = SystemColors.ControlLight;
+            bAjouter.Location = new Point(485, 370);
+            bAjouter.Name = "bAjouter";
+            bAjouter.Size = new Size(173, 34);
+            bAjouter.TabIndex = 1;
+            bAjouter.Text = "Ajouter";
+            bAjouter.UseVisualStyleBackColor = false;
             // 
             // bDenombrer
             // 
@@ -76,6 +76,7 @@
             bConsulter.TabIndex = 3;
             bConsulter.Text = "Consulter";
             bConsulter.UseVisualStyleBackColor = false;
+            bConsulter.Click += bConsulter_Click;
             // 
             // tbNom
             // 
@@ -120,10 +121,11 @@
             Controls.Add(tbNom);
             Controls.Add(bConsulter);
             Controls.Add(bDenombrer);
-            Controls.Add(button1);
+            Controls.Add(bAjouter);
             Controls.Add(lbConsole);
             Name = "EcranBDDirect";
             Text = "EcranBDDirect";
+            Load += EcranBDDirect_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -131,7 +133,7 @@
         #endregion
 
         private ListBox lbConsole;
-        private Button button1;
+        private Button bAjouter;
         private Button bDenombrer;
         private Button bConsulter;
         private TextBox tbNom;

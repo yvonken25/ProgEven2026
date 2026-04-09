@@ -42,16 +42,17 @@
             clavierSourisToolStripMenuItem = new ToolStripMenuItem();
             explorateurToolStripMenuItem = new ToolStripMenuItem();
             baseDeDonnéesToolStripMenuItem = new ToolStripMenuItem();
+            histogrammeToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
             // menuStrip1
             // 
             menuStrip1.ImageScalingSize = new Size(24, 24);
-            menuStrip1.Items.AddRange(new ToolStripItem[] { controlesToolStripMenuItem, applicationsToolStripMenuItem, aideToolStripMenuItem, malwareToolStripMenuItem, spirographeToolStripMenuItem, clavierSourisToolStripMenuItem, explorateurToolStripMenuItem, baseDeDonnéesToolStripMenuItem });
+            menuStrip1.Items.AddRange(new ToolStripItem[] { controlesToolStripMenuItem, applicationsToolStripMenuItem, aideToolStripMenuItem, malwareToolStripMenuItem, spirographeToolStripMenuItem, clavierSourisToolStripMenuItem, explorateurToolStripMenuItem, baseDeDonnéesToolStripMenuItem, histogrammeToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(962, 33);
+            menuStrip1.Size = new Size(1264, 33);
             menuStrip1.TabIndex = 0;
             menuStrip1.Text = "menuStrip1";
             // 
@@ -146,11 +147,20 @@
             baseDeDonnéesToolStripMenuItem.Text = "Base de données";
             baseDeDonnéesToolStripMenuItem.Click += baseDeDonnéesToolStripMenuItem_Click;
             // 
+            // histogrammeToolStripMenuItem
+            // 
+            histogrammeToolStripMenuItem.Name = "histogrammeToolStripMenuItem";
+            histogrammeToolStripMenuItem.Size = new Size(137, 29);
+            histogrammeToolStripMenuItem.Text = "Histogramme";
+            histogrammeToolStripMenuItem.Click += histogrammeToolStripMenuItem_Click;
+            // 
             // Form3
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(962, 450);
+            BackgroundImage = Properties.Resources.Design_sans_titre;
+            BackgroundImageLayout = ImageLayout.Stretch;
+            ClientSize = new Size(1264, 671);
             Controls.Add(menuStrip1);
             MainMenuStrip = menuStrip1;
             Name = "Form3";
@@ -178,5 +188,6 @@
         private ToolStripMenuItem clavierSourisToolStripMenuItem;
         private ToolStripMenuItem explorateurToolStripMenuItem;
         private ToolStripMenuItem baseDeDonnéesToolStripMenuItem;
+        private ToolStripMenuItem histogrammeToolStripMenuItem;
     }
 }

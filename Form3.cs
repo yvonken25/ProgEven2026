@@ -90,5 +90,11 @@ namespace ProgEven2026
             f.Show();
 
         }
+
+        private void histogrammeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            EcranHistogramme f = new EcranHistogramme();
+            f.Show();
+        }
     }
 }
