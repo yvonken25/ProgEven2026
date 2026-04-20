@@ -142,7 +142,7 @@
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(571, 751);
+            ClientSize = new Size(589, 780);
             Controls.Add(lbResultats);
             Controls.Add(bPointeurTrigonometrique);
             Controls.Add(bPointeurPolynome);

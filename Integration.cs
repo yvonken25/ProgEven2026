@@ -68,7 +68,8 @@ namespace ProgEven2026
 
             lbResultats.Items.Add("Méthode des trapèzes (Traditionnelle)");
             lbResultats.Items.Add("Polynôme : x*x + 2");
-
+            //
+             
 
             for (int m = 1; m <= 16; m *= 2)
             {
