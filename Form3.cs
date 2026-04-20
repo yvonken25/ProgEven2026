@@ -96,5 +96,11 @@ namespace ProgEven2026
             EcranHistogramme f = new EcranHistogramme();
             f.Show();
         }
+
+        private void integrationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Integration f = new Integration();
+            f.Show();
+        }
     }
 }

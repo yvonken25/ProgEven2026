@@ -43,13 +43,14 @@
             explorateurToolStripMenuItem = new ToolStripMenuItem();
             baseDeDonnéesToolStripMenuItem = new ToolStripMenuItem();
             histogrammeToolStripMenuItem = new ToolStripMenuItem();
+            integrationToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
             // menuStrip1
             // 
             menuStrip1.ImageScalingSize = new Size(24, 24);
-            menuStrip1.Items.AddRange(new ToolStripItem[] { controlesToolStripMenuItem, applicationsToolStripMenuItem, aideToolStripMenuItem, malwareToolStripMenuItem, spirographeToolStripMenuItem, clavierSourisToolStripMenuItem, explorateurToolStripMenuItem, baseDeDonnéesToolStripMenuItem, histogrammeToolStripMenuItem });
+            menuStrip1.Items.AddRange(new ToolStripItem[] { controlesToolStripMenuItem, applicationsToolStripMenuItem, aideToolStripMenuItem, malwareToolStripMenuItem, spirographeToolStripMenuItem, clavierSourisToolStripMenuItem, explorateurToolStripMenuItem, baseDeDonnéesToolStripMenuItem, histogrammeToolStripMenuItem, integrationToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Size = new Size(1264, 33);
@@ -154,6 +155,13 @@
             histogrammeToolStripMenuItem.Text = "Histogramme";
             histogrammeToolStripMenuItem.Click += histogrammeToolStripMenuItem_Click;
             // 
+            // integrationToolStripMenuItem
+            // 
+            integrationToolStripMenuItem.Name = "integrationToolStripMenuItem";
+            integrationToolStripMenuItem.Size = new Size(115, 29);
+            integrationToolStripMenuItem.Text = "Integration";
+            integrationToolStripMenuItem.Click += integrationToolStripMenuItem_Click;
+            // 
             // Form3
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
@@ -189,5 +197,6 @@
         private ToolStripMenuItem explorateurToolStripMenuItem;
         private ToolStripMenuItem baseDeDonnéesToolStripMenuItem;
         private ToolStripMenuItem histogrammeToolStripMenuItem;
+        private ToolStripMenuItem integrationToolStripMenuItem;
     }
 }

@@ -118,7 +118,7 @@
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(859, 450);
             Controls.Add(bConfirmer);
             Controls.Add(pCadre);
             Name = "EcranAPropos";
